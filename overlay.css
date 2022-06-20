@@ -1,0 +1,28 @@
+.modal {
+    position: fixed; /* bc the overlay is always on top of the content and above everything else and if we would scroll it stays in the middle of the screen */
+    top: 20%;
+    left: 5%;
+    width: 90%;  /* center since we have 5% on the left  */ 
+    background-color: white;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    
+}
+
+#backdrop{
+    position: fixed;
+    top: 0; left: 0; /* because should start in the left corner */
+    width: 100%; height: 100%; /* thi take the full width and height of the screen */
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+} 
+
+@media (min-width: 48rem) {
+   .modal{
+       left: calc(50% - 20rem);
+       width: 40rem;
+
+   }  /* the center of the modal will be exactly on the middle */
+}
